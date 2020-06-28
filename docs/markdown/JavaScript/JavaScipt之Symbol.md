@@ -1,0 +1,114 @@
+# javascript 之 Symbol
+
+es5 对象属性名都是字符串，很容易造成属性名冲突。
+es6 引入新的原始类型。Symbol 表示独一无二的值。
+Symbol 通过 Symbol 函数生成。也就是说。对象的属性名现在可以有两种类型，一种是原有的字符串，另一种就是新增的 Symbol 类型。
+Symbol 值作为属性名时，该属性是公开属性，不是私有属性。
+
+## Symbol.for()
+
+有时候希望重新使用一个 Symbol 值，Symbol.for()就可以做到这点。
+
+```javascript
+var a = Symbol.for('zzc');
+var b = Symbol.for('zzc');
+a === b; // true
+```
+
+为什么会相等呢？Symbol.for 方法接受一个字符串作为参数，然后去搜索是否有以这个参数作为名称的 Symbol 值，如果有，就返回这个 Symbol 值，否则就新建返回一个以该字符串为名称的 Symbol 值 Symbol.for 与 Symbol 这两种写法都会生成新的 Symbol 值。不同之处在于，前者会被登记在全局环境中供搜索，而后者不会。
+
+## Symbol.keyFor()
+
+该方法返回一个已登记的 Symbol 类型值的 key<br />
+
+```javascript
+var s1 = Symbol.for('foo');
+Symbol.keyFor(s1); // 'foo'
+
+var s2 = Symbol('foo');
+Symbol.keyFor(s2); // undefined
+```
+
+## Symbol.hasInstance
+
+**`Symbol.hasInstance`**用于判断某对象是否为某构造器的实例。因此你可以用它自定义 [`instanceof`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof) 操作符在某个类上的行为。<br />
+
+| `Symbol.hasInstance` 属性的属性特性： |       |
+| :------------------------------------ | ----- |
+| writable                              | false |
+| enumerable                            | false |
+| configurable                          | false |
+
+<br />你可实现一个自定义的`instanceof` 行为，例如：
+
+```
+class MyArray {
+  static [Symbol.hasInstance](instance) {
+    return Array.isArray(instance);
+  }
+}
+console.log([] instanceof MyArray); // true
+```
+
+## 实战
+
+### 1.消除魔术字符串
+
+魔术字符串指的是，在代码之中多次出现、与代码行程强耦合的某一个具体的字符串或数值。<br />风格良好的代码，应该尽量消除魔术字符串，而由含义清晰的变量代替。<br />魔术字符串：
+
+```javascript
+function game(name) {
+  switch (name) {
+    case 'bird':
+      console.log('fly!!!');
+      break;
+    case 'fish':
+      console.log('swimming!!!');
+      break;
+    case 'person':
+      console.log('running!!!');
+      break;
+    default:
+      console.log('walk!!!');
+  }
+}
+game('bird'); // fly!!!
+```
+
+常用的消除魔术字符串的方法，就是把它写成一个变量。
+
+```javascript
+let bodyType = {
+  bird: 'bird',
+  fish: 'fish',
+  person: 'person',
+};
+function game(name) {
+  switch (name) {
+    case bodyType.bird:
+      console.log('fly!!!');
+      break;
+    case bodyType.fish:
+      console.log('swimming!!!');
+      break;
+    case bodyType.person:
+      console.log('running!!!');
+      break;
+    default:
+      console.log('walk!!!');
+  }
+}
+game(bodyType.bird); // fly!!!
+```
+
+仔细分析，bodyType.bird 等于哪个值并无重要，只要确保不和其他属性的值制图就可以。因此，这里很适合改用 Symbol 的值。
+
+```javascript
+let bodyType = {
+  bird: Symbol(),
+  fish: Symbol(),
+  person: Symbol(),
+};
+```
+
+常量使用 Symbol 值的最大好处就是，其他任何值都不可能有相同的值了，因此可以保证 Switch 语句按设计的方式工作。
