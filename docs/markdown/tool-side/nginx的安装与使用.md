@@ -1,4 +1,4 @@
-#nginx 的安装与使用
+# nginx 的安装与使用
 
 ## 下载 nginx
 

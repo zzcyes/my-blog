@@ -52,29 +52,29 @@ let instance2 = new Child();
 instance2.bags; //  ['pen','ball','book','phone'];
 ```
 
-#### 1. 优点
+**优点**
 
 简单易操作。
 
-#### 2. 注意
+**注意**
 
-###### 2.1 别忘记默认的类型
+- 别忘记默认的类型
 
 我们知道，所有的引用类型都继承了 Object，而这个继承也是通过原型链实现的。
 
-###### 2.2 确定原型和实例的关系
+- 确定原型和实例的关系
 
 instanceof:测试实例与原型链中出现过的构造函数。isPrototyoeOf:只要是原型链中出现过的原型，都可以说是该原型链所派生的实例的原型。子类要在继承后定义方法(会被覆盖)。不能使用对象字面量创建原型方法(切断原型链)。父类包含引用类型的情况(所有子类实例共享父类属性(引用类型))
 
-#### 3. 缺点
+**缺点**
 
-###### 3.1 有引用类型的时候，各个实例对该引用的操作会影响其他实例。父类使用 this 声明的属性被所有实例共享。 原因是实例化是父类一次性赋值到子类实例的原型上，它会将父类通过 this 声明的属性也赋值到子类原型上。例如在父类中一个数组值，在子类的多个实例中，无论哪一个实例去修改这个数组的值，都会影响到其他子类实例。
+- 有引用类型的时候，各个实例对该引用的操作会影响其他实例。父类使用 this 声明的属性被所有实例共享。 原因是实例化是父类一次性赋值到子类实例的原型上，它会将父类通过 this 声明的属性也赋值到子类原型上。例如在父类中一个数组值，在子类的多个实例中，无论哪一个实例去修改这个数组的值，都会影响到其他子类实例。
 
-###### 3.2 没有办法在不影响所有对象实例的情况下，给超类型的构造函数传递参数。不灵活
+- 没有办法在不影响所有对象实例的情况下，给超类型的构造函数传递参数。不灵活
 
 ## 二、借用构造函数继承(伪造对象或经典继承)(call/apply)
 
-###### 原理:在子类型构造函数的内部调用超类型构造函数
+**原理:在子类型构造函数的内部调用超类型构造函数**
 
 ```javascript
 function Parent(age) {
@@ -102,15 +102,15 @@ instance1.bags; //  ['pen','ball','book','phone'];
 instance2.bags; //  ['pen','ball','book'];
 ```
 
-#### 1. 优点
+**优点**
 
 可以父类传递参数。解决父类声明的属性会被实例共享的问题
 
-#### 2. 缺点
+**缺点**
 
 只能继承父类通过声明的属性/方法,不能继承父类 protptype 上的属性/方法。父类方法无法复用,每次实例化子类,都要执行父类函数.重新声明父类所定义的方法,无法复用
 
-#### 3. 疑问
+**疑问**
 
 重新声明父类所定义的方法,无法复用?
 
@@ -142,19 +142,17 @@ Child.prototype.getChildAge = function () {
 };
 ```
 
-######
-
-#### 1. 优点
+**优点**
 
 解决原型链继承父类 this 声明的属性或者方法被共享的问题。解决借用构造函数解决不能继承父类 prototype 对象上的属性/方法问题。
 
-#### 2. 缺点
+**缺点**
 
 调用了父类函数两次，造成一定的性能问题。因调用两次父类，导出父类通过 this 声明的属性和方法被生成两份的问题。原型链上下文丢失，子类和父类通过 prototype 声明的属性和方法都存在与子类 prototype 上。
 
-#### 3. 疑问
+**疑问**
 
-###### Child.prototype.constructor = Parent 这一步的作用?
+- Child.prototype.constructor = Parent 这一步的作用?
 
 原型链上下文丢失，子类和父类通过 prototype 声明的属性和方法都存在与子类 prototype 上?
 
@@ -171,11 +169,11 @@ function object(o) {
 }
 ```
 
-#### 1. 优点
+**优点**
 
 兼容性好，最简单的对象继承。
 
-#### 2. 缺点
+**缺点**
 
 多少实例共享被继承的属性，存在被篡改的情况，不能传递参数。
 
@@ -194,11 +192,11 @@ function objeceAnother(o) {
 }
 ```
 
-#### 1. 优点
+**优点**
 
 兼容性好，最简单的对象继承。
 
-#### 2. 缺点
+**缺点**
 
 多少实例共享被继承的属性，存在被篡改的情况，不能传递参数。
 
@@ -233,7 +231,7 @@ function inheritPrototype(Child, Parent) {
 }
 ```
 
-#### 1. 优点
+**优点**
 
 1、寄生组合式继承是当前最成熟的继承方法，也是先也常用的继承方法，在大多数 Js 框架中都是用这个作为继承方案。
 
@@ -242,15 +240,15 @@ function inheritPrototype(Child, Parent) {
 2、避免生成了不必要的属性。
 3、使用原型式继承保证了原型链上下文不变，子类的 prototype 只有子类通过 prototype 声明的属性和方法，父类的 prototype 只有父类通过 prototype 声明的属性和方法。
 
-#### 2. 写法缺点
+**写法缺点**
 
 Child.prototype = parentPrototype; 直接把 Child 的 prototype 指走了,如果存在原有的自定义的方法,那不就丢失了吗。
 
-#### 3. 疑惑
+**疑惑**
 
 Child.prototype.constructor = Child; 作用?
 
-###### constructor = >MDN 解释: 返回创建实例对象的`Object`构造函数的引用。
+ >MDN constructor=>解释: 返回创建实例对象的`Object`构造函数的引用。
 
 即返回实例对象的构造函数的引用，例如：
 
@@ -259,11 +257,13 @@ let instance = new sonFn()
 instance.constructor // sonFn函数
 ```
 
-<a name="sTVVL"></a>
+**`constructor`的应用场景：**
 
-#### `constructor`的应用场景：
+**当我们只有实例对象没有构造函数的引用时**：
 
-**当我们只有实例对象没有构造函数的引用时**：<br />某些场景下，我们对实例对象经过多轮导入导出，我们不知道实例是从哪个函数中构造出来或者追踪实例的构造函数，较为艰难。<br />这个时候就可以通过实例对象的`constructor`属性来得到构造函数的引用：
+某些场景下，我们对实例对象经过多轮导入导出，我们不知道实例是从哪个函数中构造出来或者追踪实例的构造函数，较为艰难
+
+这个时候就可以通过实例对象的`constructor`属性来得到构造函数的引用：
 
 ```
 let instance = new sonFn() // 实例化子类
@@ -273,7 +273,7 @@ let  fn = instance.constructor
 // do something： new fn() / fn.prototype / fn.length / fn.arguments等等
 ```
 
-#### 保持`constructor`指向的一致性：
+**保持`constructor`指向的一致性：**
 
 因此每次重写函数的 prototype 都应该修正一下`constructor`的指向，以保持读取`constructor`行为的一致性。
 
@@ -298,15 +298,15 @@ class ColorPoint extends Point {
 }
 ```
 
-#### 1. 注意
+**注意**
 
 子类必须在 constructor 方法中代用 super 方法，否则新建实例将会报错，这是因为子类自己的 this 对象，必须先通过父类的构造函数完成塑性，得到父类的属性和方法，然后对其加工，加上子类自己的属性和方法。如果不调用 super 方法，子类将得不到 this 对象。如果没有定义 constructor 方法，这个方法会被默认的添加。
 
-##### 2. 与 es5 区别
+**与 es5 区别**
 
 ES5 的继承实质是先创建子类的实例对象 this，然后将父类的方法添加到 this 上。ES6 的继承实质是先将父类实例对象的方法和属性加到 this 上面，然后在用子类的构造函数修改 this。
 
-##### 3. es6=>es5
+**es6=>es5**
 
 ```javascript
 function _inherits(subClass, superClass) {
@@ -330,7 +330,7 @@ function _inherits(subClass, superClass) {
 
 ### 2. constructor
 
-###### MDN:返回创建实例对象的`Object`构造函数的引用。
+>MDN:返回创建实例对象的`Object`构造函数的引用。
 
 ### 3. prototype
 
@@ -338,38 +338,19 @@ function _inherits(subClass, superClass) {
 
 ## 查缺补漏
 
-<a name="gQt2G"></a>
-
 ### 1. for...in/for...of 等遍历方法区别
-
-<a name="mbq3n"></a>
 
 ### 2. 对象创建的方法
 
-<a name="ccsVH"></a>
-
 ### 3. 原型、原型链、prototype、**proto**
-
-<a name="rpLcb"></a>
 
 ### 4. constructor
 
-<a name="OQ4hb"></a>
-
 ### 5. Object 默认方法
-
-<a name="toABu"></a>
 
 ### 6. 原始类型、引用类型
 
-<a name="EI8Ot"></a>
-
 ### 7. 堆、栈、队列
-
-<a name="6K84v"></a>
 
 ### 8. toString、valueOf
 
-<a name="ryujj"></a>
-
-##

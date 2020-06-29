@@ -1,10 +1,10 @@
 # JavaScript 之 BOM
 
-###### ECMAScript 是 JavaScript 的核心，但如果要在 Web 中使用 JavaScript，那么**BOM（浏览器对象模型）**则无疑才是真正的核心。BOM 提供了很多对象，用于访问浏览器的功能，这些功能与任何网页内容无关。W3C 为了把浏览器中 JavaScript 最基本的部分标准化，已经将 BOM 的主要方面纳入了 HTML5 的规范中。
+**ECMAScript 是 JavaScript 的核心，但如果要在 Web 中使用 JavaScript，那么**BOM（浏览器对象模型）**则无疑才是真正的核心。BOM 提供了很多对象，用于访问浏览器的功能，这些功能与任何网页内容无关。W3C 为了把浏览器中 JavaScript 最基本的部分标准化，已经将 BOM 的主要方面纳入了 HTML5 的规范中。**
 
 ## 一、window 对象
 
-<br />BOM 的**核心对象**是 window，它表示**浏览器的一个实例**。在浏览器中，window 对象有双重角色，它既是通过 JavaScript 访问浏览器窗口的**一个接口**，又是 ECMAScript 规定的**Global 对象**。这意味着在网页中定义的任何一个对象、变量和函数，都以 window 作为其 Global 对象，因此有权访问 parseInt()等方法。
+BOM 的**核心对象**是 window，它表示**浏览器的一个实例**。在浏览器中，window 对象有双重角色，它既是通过 JavaScript 访问浏览器窗口的**一个接口**，又是 ECMAScript 规定的**Global 对象**。这意味着在网页中定义的任何一个对象、变量和函数，都以 window 作为其 Global 对象，因此有权访问 parseInt()等方法。
 
 ### 1. 全局作用域
 

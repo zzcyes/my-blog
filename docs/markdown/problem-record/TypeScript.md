@@ -1,3 +1,5 @@
+# TypeScript
+
 ## Cannot redeclare block-scoped variable 'xxx'.ts(2451)
 
 hello.ts

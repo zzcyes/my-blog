@@ -1,8 +1,8 @@
-# store 中 gette 和 mutation 的生成
+# store 中 getter 和 mutation 的生成
 
 <a name="nqvR8"></a>
 
-### 使用方法
+## 使用方法
 
 createStoreFn 函数有三个属性 states、type 和 prefix
 
@@ -38,7 +38,7 @@ const DEFAULT_PREFIX = {
 
 <a name="yYmsW"></a>
 
-### mutations.js
+## mutations.js
 
 ```javascript
 import { createStoreFn, STORE_TYPE } from '@/utils/createStoreFn';
@@ -49,7 +49,7 @@ export default { ...createStoreFn({ states, type: STORE_TYPE.MUTATIONS }) };
 
 <a name="Wfwym"></a>
 
-### getters.js
+## getters.js
 
 ```javascript
 import { createStoreFn, STORE_TYPE } from '@/utils/createStoreFn';
@@ -60,13 +60,13 @@ export default { ...createStoreFn({ states, type: STORE_TYPE.GETTERS }) };
 
 <a name="S68Fj"></a>
 
-### actions.js
+## actions.js
 
 暂不支持，后续可扩展
 
 <a name="X6krr"></a>
 
-### 代码实现
+## 代码实现
 
 ```javascript
 export const STORE_TYPE = {

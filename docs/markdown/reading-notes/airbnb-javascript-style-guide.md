@@ -1,4 +1,6 @@
-主要记录自己不常见或者比较重要的一些内容
+# airbnb-javascript-style-guide
+
+主要记录自己不常见或者不注重的一些内容
 
 完整指南👉请戳这里直达[《airbnb-javascript-style-guide》](https://github.com/airbnb/javascript)
 
