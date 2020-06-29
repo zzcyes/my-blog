@@ -1,8 +1,8 @@
 # JavaScript 之 function
 
-# 一、属性
+## 一、属性
 
-## 1.Function 构造函数
+### 1.Function 构造函数
 
 > new Function ([arg1[, arg2[, ...argN]],] functionBody)
 
@@ -15,7 +15,7 @@ func(1 + 2); // 3
 
 使用  `Function`  构造器生成的  `Function`  对象是在函数创建时解析的。这比你使用[函数声明](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/function)或者[函数表达式](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/function)并在你的代码中调用更为低效，因为使用后者创建的函数是跟其他代码一起解析的。
 
-### 函数声明
+**函数声明**
 
 ```javascript
 function func(type) {
@@ -23,7 +23,7 @@ function func(type) {
 }
 ```
 
-### 函数表达
+**函数表达**
 
 ```javascript
 let funExpression = function (type) {
@@ -31,11 +31,11 @@ let funExpression = function (type) {
 };
 ```
 
-## 2.Function.arguments
+### 2.Function.arguments
 
 已被废弃，用 arguments 对象替代
 
-### arguments
+**arguments**
 
 `arguments`对象是所有（非箭头）函数中都可用的**局部变量**。你可以使用`arguments`对象在函数中引用函数的参数。此对象包含传递给函数的每个参数，第一个参数在索引 0 处。
 
@@ -75,7 +75,7 @@ var args =
 
 如果调用的参数多于正式声明接受的参数，则可以使用`arguments`对象。这种技术对于可以传递可变数量的参数的函数很有用。使用  [arguments.length](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length)来确定传递给函数参数的个数，然后使用`arguments`对象来处理每个参数。要确定函数[签名](https://developer.mozilla.org/zh-CN/docs/Glossary/Signature/Function)中（输入）参数的数量，请使用[Function.length](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function/length)属性。
 
-#### **arguments.callee**
+**arguments.callee**
 
 指向当前执行的函数
 
@@ -93,17 +93,17 @@ console.log(funcCopy);
 }
 ```
 
-#### **arguments.caller **
+**arguments.caller**
 
-###### Tips:该 api 不能保证有用
+>Tips:该 api 不能保证有用
 
-#### 指向调用当前函数的函数。
+指向调用当前函数的函数。
 
-#### **arguments.length**
+ **arguments.length**
 
-###### 指向传递给当前函数的参数数量
+指向传递给当前函数的参数数量
 
-#### arguments[@@iterator]
+**arguments[@@iterator]**
 
 返回一个新的 Array 迭代器对象，该对象包含参数中每个索引的值。
 
@@ -121,7 +121,7 @@ func(1, 2, 3, 4);
 4;
 ```
 
-#### 定义连接字符串的函数
+**定义连接字符串的函数**
 
 ```javascript
 function stringConcat(separator) {
@@ -131,9 +131,9 @@ function stringConcat(separator) {
 stringConcat('-', 1, 2, 3, 4, 5, 6); // 1-2-3-4-5-6
 ```
 
-## 3.Function.name
+### 3.Function.name
 
-#### 函数声明的名称
+**函数声明的名称**
 
 ```javascript
 function thisFunc() {}
@@ -143,7 +143,7 @@ thisFunc.name; // 'thisFunc'
 new Function().name; // "anonymous"
 ```
 
-#### 绑定函数
+**绑定函数**
 
 Function.bind() 所创建的函数将会在函数的名称前加上"bound " 。
 
@@ -162,7 +162,7 @@ let bindGetXX = getXX.bind(obj);
 bindGetXX.name; //'bound getX';
 ```
 
-#### 类中的函数名称
+**类中的函数名称**
 
 ```javascript
 function Foo() {}
@@ -184,7 +184,7 @@ class man extends person {
 man.name; // 'static name'
 ```
 
-#### getters 和 setters 的函数名
+**getters 和 setters 的函数名**
 
 ```javascript
 var o = {
@@ -197,7 +197,7 @@ descriptor.get.name; // "get foo"
 descriptor.set.name; // "set foo";
 ```
 
-#### Symbol 作为函数名称
+**Symbol 作为函数名称**
 
 ```javascript
 var sym1 = Symbol('foo');
@@ -211,7 +211,7 @@ o[sym1].name; // "[foo]"
 o[sym2].name; // ""
 ```
 
-#### JavaScript 压缩和 minifiers
+**JavaScript 压缩和 minifiers**
 
 当使用`Function.name`和那些 JavaScript 压缩器（minifiers）或混淆器进行源码转换时要小心。这些工具通常用作 JavaScript 构建管道的一部分，以在程序部署到生产之前减少程序的大小。但这种转换通常会在构建时更改函数的名称
 
@@ -240,17 +240,17 @@ if (b.constructor.name === 'Foo') {
 
 如果您依赖于`Function.name`，就像上面的示例一样，确保您的构建管道不会更改函数名称，也不要假定函数具有特定的名称。
 
-## 4.Function.length
+### 4.Function.length
 
 `length`  属性指明函数的形参个数。
 
-## 5.Function.prototype
+### 5.Function.prototype
 
 `Function.prototype`  属性存储了  [`Function`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Function)  的原型对象。
 
-# 二、方法
+## 二、方法
 
-## 1. Function.prototype.bind()
+### 1. Function.prototype.bind()
 
 > function.bind(thisArg[, arg1[, arg2[, ...]]])
 
@@ -271,11 +271,11 @@ const bindFunc = unBindFunc.bind(obj);
 bindFunc(); // 'x'
 ```
 
-## 2. Function.prototype.call()
+### 2. Function.prototype.call()
 
-## 3. Function.prototype.apply()
+### 3. Function.prototype.apply()
 
-## 4. Function.prototype.toString()
+### 4. Function.prototype.toString()
 
 ```javascript
 function baz() {}

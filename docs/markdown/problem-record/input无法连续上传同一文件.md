@@ -1,4 +1,4 @@
-# input[type=&quot;file&quot;]，无法连续上传同一文件
+# input无法连续上传同一文件
 
 如有问题[@钟子晨（zzcyes)](https://www.yuque.com/zzcyes)
 如无耐心看完，请戳这里 👉[解决方案](#HmaKn)

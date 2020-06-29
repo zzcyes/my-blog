@@ -39,7 +39,7 @@ Symbol.keyFor(s2); // undefined
 | enumerable                            | false |
 | configurable                          | false |
 
-<br />你可实现一个自定义的`instanceof` 行为，例如：
+你可实现一个自定义的`instanceof` 行为，例如：
 
 ```
 class MyArray {
@@ -54,7 +54,11 @@ console.log([] instanceof MyArray); // true
 
 ### 1.消除魔术字符串
 
-魔术字符串指的是，在代码之中多次出现、与代码行程强耦合的某一个具体的字符串或数值。<br />风格良好的代码，应该尽量消除魔术字符串，而由含义清晰的变量代替。<br />魔术字符串：
+魔术字符串指的是，在代码之中多次出现、与代码行程强耦合的某一个具体的字符串或数值。
+
+风格良好的代码，应该尽量消除魔术字符串，而由含义清晰的变量代替。
+
+魔术字符串：
 
 ```javascript
 function game(name) {
