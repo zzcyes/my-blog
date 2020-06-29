@@ -14,32 +14,36 @@ module.exports = {
             { text: 'catalogue', link: '/catalogue' },
             {
                 text: 'Blog',
-                items: [{
-                    text: 'hybrid-app',
-                    link: '/markdown/hybrid-app/compatibility'
-                },
-                {
-                    text: 'JavaScript',
-                    link: '/markdown/JavaScript/JavaScipt之Symbol'
-                },
-                {
-                    text: 'problem-record',
-                    link: '/markdown/problem-record/CORS'
-                },
-                {
-                    text: 'reading-notes',
-                    link: '/markdown/reading-notes/airbnb-javascript-style-guide'
-                },
-                { text: 'tool-side', link: '/markdown/tool-side/nginx的安装与使用' },
-                {
-                    text: 'TypeScript',
-                    link: '/markdown/TypeScript/TypeScript入门之安装与配置'
-                },
-                {
-                    text: 'Vue',
-                    link: '/markdown/Vue/store中“getter”和“mutation”的生成'
-                },
-                { text: 'webpack', link: '/markdown/webpack/webpack入门之安装与配置' }]
+                items: [
+                    {
+                        text: 'git',
+                        link: '/markdown/git/Github访问异常'
+                    }, {
+                        text: 'hybrid-app',
+                        link: '/markdown/hybrid-app/compatibility'
+                    },
+                    {
+                        text: 'JavaScript',
+                        link: '/markdown/JavaScript/JavaScipt之Symbol'
+                    },
+                    {
+                        text: 'problem-record',
+                        link: '/markdown/problem-record/CORS'
+                    },
+                    {
+                        text: 'reading-notes',
+                        link: '/markdown/reading-notes/airbnb-javascript-style-guide'
+                    },
+                    { text: 'tool-side', link: '/markdown/tool-side/nginx的安装与使用' },
+                    {
+                        text: 'TypeScript',
+                        link: '/markdown/TypeScript/TypeScript入门之安装与配置'
+                    },
+                    {
+                        text: 'Vue',
+                        link: '/markdown/Vue/store中“getter”和“mutation”的生成'
+                    },
+                    { text: 'webpack', link: '/markdown/webpack/webpack入门之安装与配置' }]
             },
             {
                 text: 'github', link: 'https://github.com/zzcyes'
