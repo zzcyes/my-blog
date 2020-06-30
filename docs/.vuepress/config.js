@@ -1,151 +1,77 @@
 module.exports = {
-    title: 'zzcyes',
-    base: "/vue-press-blog/",
-    description: "zzcyes'sblog",
-    head: [['link', { rel: 'icon', href: '/img/logo.ico' }]],
-    themeConfig: {
-        navbar: true,
-        search: true,
-        searchMaxSuggestions: 10,
-        lastUpdated: 'Last Updated',
-        displayAllHeaders: true,
-        nav: [
-            { text: 'Home', link: '/' },
-            { text: 'catalogue', link: '/catalogue' },
-            {
-                text: 'Blog',
-                items: [
-                    {
-                        text: 'git',
-                        link: '/markdown/git/Github访问异常'
-                    }, {
-                        text: 'hybrid-app',
-                        link: '/markdown/hybrid-app/compatibility'
-                    },
-                    {
-                        text: 'JavaScript',
-                        link: '/markdown/JavaScript/JavaScipt之Symbol'
-                    },
-                    {
-                        text: 'problem-record',
-                        link: '/markdown/problem-record/CORS'
-                    },
-                    {
-                        text: 'reading-notes',
-                        link: '/markdown/reading-notes/airbnb-javascript-style-guide'
-                    },
-                    { text: 'tool-side', link: '/markdown/tool-side/nginx的安装与使用' },
-                    {
-                        text: 'TypeScript',
-                        link: '/markdown/TypeScript/TypeScript入门之安装与配置'
-                    },
-                    {
-                        text: 'Vue',
-                        link: '/markdown/Vue/store中“getter”和“mutation”的生成'
-                    },
-                    { text: 'webpack', link: '/markdown/webpack/webpack入门之安装与配置' }]
-            },
-            {
-                text: 'github', link: 'https://github.com/zzcyes'
-            }
+  title: 'zzcyes',
+  base: '/vue-press-blog/',
+  description: 'Learning and recording',
+  head: [['link', { rel: 'icon', href: '/img/logo.ico' }]],
+  themeConfig: {
+    navbar: true,
+    search: true,
+    searchMaxSuggestions: 10,
+    lastUpdated: 'Last Updated',
+    nav: [
+      { text: 'Home', link: '/' },
+      { text: 'Catalogue', link: '/catalogue' },
+      { text: 'Github', link: 'https://github.com/zzcyes' },
+    ],
+    sidebar: [
+      ['/catalogue', 'Catalogue'],
+      {
+        title: 'JavaScript',
+        sidebarDepth: 2,
+        children: [
+          'markdown/JavaScript/001_JavaScript之对象',
+          'markdown/JavaScript/002_JavaScript之对象的创建',
+          'markdown/JavaScript/003_JavaScript之继承',
+          'markdown/JavaScript/004_JavaScript之数组',
+          'markdown/JavaScript/005_JavaScript之原型原型链prototype',
+          'markdown/JavaScript/006_JavaScript之BOM',
+          'markdown/JavaScript/007_JavaScript之DOM',
+          'markdown/JavaScript/008_JavaScript之function',
+          'markdown/JavaScript/009_JavaScript之Symbol',
         ],
-        sidebar: {
-            '/markdown/git/': [
-                {
-                    title: 'git',
-                    collapsable: false,
-                    children: [
-                        'github上fork的仓库更新.md',
-                        'Github访问异常.md'
-                    ]
-                }
-            ],
-            '/markdown/hybrid-app/': [
-                {
-                    title: 'hybrid-app',
-                    collapsable: false,
-                    children: [
-                        'compatibility.md'
-                    ]
-                }
-            ],
-            '/markdown/JavaScript/': [
-                {
-                    title: 'JavaScript',
-                    collapsable: false,
-                    children: [
-                        'JavaScipt之Symbol.md',
-                        'JavaScript之BOM.md',
-                        'JavaScript之DOM.md',
-                        'JavaScript之function.md',
-                        'JavaScript之原型原型链prototype.md',
-                        'JavaScript之对象.md',
-                        'JavaScript之对象的创建.md',
-                        'JavaScript之数组.md',
-                        'JavaScript之继承.md'
-                    ]
-                }
-            ],
-            '/markdown/problem-record/': [
-                {
-                    title: 'problem-record',
-                    collapsable: false,
-                    children: [
-                        'CORS.md',
-                        'HTTP&HTTPS混用.md',
-                        'input无法连续上传同一文件.md',
-                        'TypeScript.md'
-                    ]
-                }
-            ],
-            '/markdown/reading-notes/': [
-                {
-                    title: 'reading-notes',
-                    collapsable: false,
-                    children: [
-                        'airbnb-javascript-style-guide.md',
-                        'css-world.md'
-                    ]
-                }
-            ],
-            '/markdown/tool-side/': [
-                {
-                    title: 'tool-side',
-                    collapsable: false,
-                    children: [
-                        'nginx的安装与使用.md'
-                    ]
-                }
-            ],
-            '/markdown/TypeScript/': [
-                {
-                    title: 'TypeScript',
-                    collapsable: false,
-                    children: [
-                        'TypeScript入门之安装与配置.md'
-                    ]
-                }
-            ],
-            '/markdown/Vue/': [
-                {
-                    title: 'Vue',
-                    collapsable: false,
-                    children: [
-                        'store中“getter”和“mutation”的生成.md',
-                        'Vue3.0+TypeScript脚手架搭建项目.md',
-                        'Vue3.0+vue-cli-plugin-vue-next填坑记.md'
-                    ]
-                }
-            ],
-            '/markdown/webpack/': [
-                {
-                    title: 'webpack',
-                    collapsable: false,
-                    children: [
-                        'webpack入门之安装与配置.md'
-                    ]
-                }
-            ]
-        }
-    },
+      },
+      {
+        title: 'problem-record',
+        sidebarDepth: 2,
+        children: [
+          'markdown/problem-record/001_CORS',
+          'markdown/problem-record/002_HTTP&HTTPS混用',
+          'markdown/problem-record/003_input无法连续上传同一文件',
+          'markdown/problem-record/004_TypeScript',
+        ],
+      },
+      {
+        title: 'reading-notes',
+        sidebarDepth: 2,
+        children: [
+          'markdown/reading-notes/001_airbnb-javascript-style-guide',
+          'markdown/reading-notes/002_css-world',
+        ],
+      },
+      {
+        title: 'tool-side',
+        sidebarDepth: 2,
+        children: ['markdown/tool-side/001_nginx的安装与使用'],
+      },
+      {
+        title: 'TypeScript',
+        sidebarDepth: 2,
+        children: ['markdown/TypeScript/001_TypeScript入门之安装与配置'],
+      },
+      {
+        title: 'Vue',
+        sidebarDepth: 2,
+        children: [
+          'markdown/Vue/001_store中“getter”和“mutation”的生成',
+          'markdown/Vue/002_Vue3.0+TypeScript脚手架搭建项目',
+          'markdown/Vue/003_Vue3.0+vue-cli-plugin-vue-next填坑记',
+        ],
+      },
+      {
+        title: 'webpack',
+        sidebarDepth: 2,
+        children: ['markdown/webpack/001_webpack入门之安装与配置'],
+      },
+    ],
+  },
 };

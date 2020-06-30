@@ -1,68 +1,56 @@
 # blog
 
-Learning and recording
+## 基础
 
-## hybrid-app
+### JavaScript
 
-- [compatibility](./markdown/hybrid-app/compatibility.md)
+- [001：JavaScript 之对象](./markdown/JavaScript/001_JavaScript之对象.md)
+- [002：JavaScript 之对象的创建](./markdown/JavaScript/002_JavaScript之对象的创建.md)
+- [003：JavaScript 之继承](./markdown/JavaScript/003_JavaScript之继承.md)
+- [004：JavaScript 之数组](./markdown/JavaScript/004_JavaScript之数组.md)
+- [005：JavaScript 之原型原型链 prototype](./markdown/JavaScript/005_JavaScript之原型原型链prototype.md)
+- [006：JavaScript 之 BOM](./markdown/JavaScript/006_JavaScript之BOM.md)
+- [007：JavaScript 之 DOM](./markdown/JavaScript/007_JavaScript之DOM.md)
+- [008：JavaScript 之 function](./markdown/JavaScript/008_JavaScript之function.md)
+- [009：JavaScript 之 Symbol](./markdown/JavaScript/009_JavaScript之Symbol.md)
 
-## JavaScript
+### TypeScript
 
-- [JavaScript 之 BOM](./markdown/JavaScript/JavaScript之BOM.md)
+- [001：TypeScript 入门之安装与配置](./markdown/TypeScript/001_TypeScript入门之安装与配置.md)
 
-- [JavaScript 之 DOM](./markdown/JavaScript/JavaScript之DOM.md)
+## 技术栈
 
-- [JavaScript 之 function](./markdown/JavaScript/JavaScript之function.md)
+### hybrid-app
 
-- [JavaScript 之原型、原型链及 prototype](./markdown/JavaScript/JavaScript之原型、原型链及prototype.md)
+- [001：compatibility](./markdown/hybrid-app/001_compatibility.md)
 
-- [JavaScipt 之 Symbol](./markdown/JavaScript/JavaScipt之Symbol.md)
+### vue
 
-- [JavaScript 之对象](./markdown/JavaScript/JavaScript之对象.md)
+- [001：store 中“getter”和“mutation”的生成](./markdown/Vue/001_store中“getter”和“mutation”的生成.md)
+- [002：Vue3.0+TypeScript 脚手架搭建项目](./markdown/Vue/002_Vue3.0+TypeScript脚手架搭建项目.md)
+- [003：Vue3.0+vue-cli-plugin-vue-next 填坑记](./markdown/Vue/003_Vue3.0+vue-cli-plugin-vue-next填坑记.md)
 
-- [JavaScript 之对象的创建](./markdown/JavaScript/JavaScript之对象的创建.md)
+### webpack
 
-- [JavaScript 之数组](./markdown/JavaScript/JavaScript之数组.md)
+- [001：webpack 入门之安装与配置](./markdown/webpack/001_webpack入门之安装与配置.md)
 
-- [JavaScript 之继承](./markdown/JavaScript/JavaScript之继承.md)
+## 总结
 
-## problem-record
+### problem-record
 
-- [CORS](./markdown/problem-record/CORS.md)
+- [001：CORS](./markdown/problem-record/001_CORS.md)
+- [002：HTTP&HTTPS 混用](./markdown/problem-record/002_HTTP&HTTPS混用.md)
+- [003：input 无法连续上传同一文件](./markdown/problem-record/003_input无法连续上传同一文件.md)
+- [004：TypeScript](./markdown/problem-record/004_TypeScript.md)
 
-- [HTTP&HTTPS 混用](./markdown/problem-record/HTTP&HTTPS混用.md)
+### reading-notes
 
-- [input 无法连续上传同一文件](./markdown/problem-record/input无法连续上传同一文件.md)
+- [001：airbnb-javascript-style-guide](./markdown/reading-notes/001_airbnb-javascript-style-guide.md)
+- [002：css-world](./markdown/reading-notes/002_css-world.md)
 
-- [TypeScript](./markdown/problem-record/TypeScript.md)
+### tool-side
 
-## reading-notes
-
-- [airbnb-javascript-style-guide](./markdown/reading-notes/airbnb-javascript-style-guide.md)
-
-- [css-world](./markdown/reading-notes/css-world.md)
-
-## tool-side
-
-- [Github 访问异常](./markdown/tool-side/Github访问异常.md)
-
-- [nginx 的安装与使用](./markdown/tool-side/nginx的安装与使用.md)
-
-## TypeScript
-
-- [TypeScript 入门(一)：安装与配置](<./markdown/TypeScript/TypeScript入门(一)：安装与配置.md>)
-
-## vue
-
-- [store 中“getter”和“mutation”的生成](./markdown/Vue/store中“getter”和“mutation”的生成.md)
-
-- [Vue3.0+TypeScript 脚手架搭建项目](./markdown/Vue/Vue3.0+TypeScript脚手架搭建项目.md)
-
-- [Vue3.0+vue-cli-plugin-vue-next 填坑记](./markdown/Vue/Vue3.0+vue-cli-plugin-vue-next填坑记.md)
-
-## webpack
-
-- [webpack 入门(一)：安装与配置](<./markdown/webpack/webpack入门(一)：安装与配置.md>)
+- [001：nginx 的安装与使用](./markdown/tool-side/001_nginx的安装与使用.md)
 
 ## Icons
 
