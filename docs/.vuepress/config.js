@@ -1,6 +1,6 @@
 module.exports = {
   title: 'zzcyes',
-  base: '/vue-press-blog/',
+  base: '/blog/',
   description: 'Learning and recording',
   head: [['link', { rel: 'icon', href: '/img/logo.ico' }]],
   themeConfig: {

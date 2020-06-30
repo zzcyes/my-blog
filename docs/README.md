@@ -135,3 +135,7 @@ gladly accept Heavens will.
 
 ---- excerpted from The Importance of Living, by Lin Yutang
 ```
+
+<!-- <footer style="margin-top: 40px;">
+Designed & Powerd by zhongzichen | Copyright© 2019-2020 zzcyes | <a href="http://beian.miit.gov.cn/" target="_blank">粤 ICP 备 19065257 号</a>
+</footer> -->
