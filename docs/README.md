@@ -1,7 +1,7 @@
 ---
 home: true
 actionText: 进入博客
-actionLink: /catalogue/
+actionLink: /catalogue
 # features:
 #   - title: 简洁至上
 #     details: 悟已往之不谏，知来者之可追。实迷途其未远，觉今是而昨非。
