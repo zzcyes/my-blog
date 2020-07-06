@@ -14,6 +14,7 @@ module.exports = {
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Catalogue', link: '/catalogue' },
+      { text: 'LeetCode', link: 'http://www.zzcyes.com/leetcode' },
       { text: 'Github', link: 'https://github.com/zzcyes' },
     ],
     sidebar: [
