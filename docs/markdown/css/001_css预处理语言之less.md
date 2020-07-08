@@ -1,0 +1,70 @@
+# 001_css预处理语言之less
+
+## 实战
+
+###  生成多个类名及属性
+
+```css
+@primary:dodgerblue;
+@danger: orangered;
+@warning:seagreen;
+@success: crimson;
+```
+
+#### 常规写法
+
+```less
+
+
+.primary{
+    color: @primary;
+}
+.danger{
+    color: @danger;
+}
+.warning{
+    color: @primary;
+}
+.primary{
+    color: @success;
+}
+```
+
+#### 递归写法
+
+```less
+@colors: primary, danger, warning, success;
+@legnth: length(@colors);
+
+.loop-colors(@length)
+
+.loop-colors(@n,@i:1) when (@i =< @n) {
+    @selectors: extract(@colors, @i);
+    @color: @@selectors;
+
+    &.@{selectors} {
+        color:  @color;
+    }
+
+    .loop-colors(@n, (@i + 1));
+}
+```
+
+#### each循环
+
+Released v3.7.0
+
+```less
+@selectors: {
+    primary: @primary;
+    danger: @danger;
+    warning: @warning;
+    success: @success;
+};
+
+each(@selectors, {
+    .@{key} {
+       color: @value;
+    }
+});
+```
