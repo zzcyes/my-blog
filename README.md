@@ -6,6 +6,7 @@
 
 - [001.CSS预处理语言之LESS](./docs/markdown/css/001.CSS预处理语言之LESS.md)
 
+
 ### JavaScript
 
 - [001.JavaScript之对象](./docs/markdown/JavaScript/001.JavaScript之对象.md)
@@ -31,8 +32,8 @@
 
 ### Vue
 
-- [001.store中“getter”和“mutation”的生成](./docs/markdown/Vue/001.store中“getter”和“mutation”的生成.md)
-- [002.Vue3.0+TypeScript脚手架搭建项目](./docs/markdown/Vue/002.Vue3.0+TypeScript脚手架搭建项目.md)
+- [001.store中“getter”和“mutation”的生成](./markdown/Vue/001.store中“getter”和“mutation”的生成.md)
+- [002.Vue3.0+TypeScript脚手架搭建项目](./markdown/Vue/002.Vue3.0+TypeScript脚手架搭建项目.md)
 - [003.Vue3.0+vue-cli-plugin-vue-next填坑记](./markdown/Vue/003.Vue3.0+vue-cli-plugin-vue-next填坑记.md)
 
 ### git
@@ -42,12 +43,17 @@
 
 ## 总结
 
+### others
+
+- [001.面试规划](./docs/markdown/others/001.面试规划.md)
+
 ### problem-record
 
 - [001.CORS](./docs/markdown/problem-record/001.CORS.md)
 - [002.HTTP与HTTPS混用](./docs/markdown/problem-record/002.HTTP与HTTPS混用.md)
 - [003.input无法连续上传同一文件](./docs/markdown/problem-record/003.input无法连续上传同一文件.md)
 - [004.TypeScript](./docs/markdown/problem-record/004.TypeScript.md)
+
 
 ### reading-notes
 
@@ -58,7 +64,3 @@
 
 - [001.nginx的安装与使用](./docs/markdown/tool-side/001.nginx的安装与使用.md)
 - [002.yeoman脚手架搭建](./docs/markdown/tool-side/002.yeoman脚手架搭建.md)
-
-## Icons
-
-✨🐛🔗📦🔨👉🌈🎨✅📝💄🌱🔰🆙🛡⚙️🌍🖥⌨️🤝❤️💚⚡🔌🧳💪🎯❓👬🎁💿📖🧐🤔👽🎉🔧
