@@ -52,6 +52,11 @@ module.exports = {
                         'markdown/JavaScript/010.JavaScript之模块']
             },
             {
+                title: 'others',
+                sidebarDepth: 2,
+                children: ['markdown/others/001.面试规划']
+            },
+            {
                 title: 'problem-record',
                 sidebarDepth: 2,
                 children:

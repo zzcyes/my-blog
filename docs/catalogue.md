@@ -6,6 +6,7 @@
 
 - [001.CSS预处理语言之LESS](./markdown/css/001.CSS预处理语言之LESS.md)
 
+
 ### JavaScript
 
 - [001.JavaScript之对象](./markdown/JavaScript/001.JavaScript之对象.md)
@@ -42,12 +43,17 @@
 
 ## 总结
 
+### others
+
+- [001.面试规划](./markdown/others/001.面试规划.md)
+
 ### problem-record
 
 - [001.CORS](./markdown/problem-record/001.CORS.md)
 - [002.HTTP与HTTPS混用](./markdown/problem-record/002.HTTP与HTTPS混用.md)
 - [003.input无法连续上传同一文件](./markdown/problem-record/003.input无法连续上传同一文件.md)
 - [004.TypeScript](./markdown/problem-record/004.TypeScript.md)
+
 
 ### reading-notes
 
@@ -58,7 +64,3 @@
 
 - [001.nginx的安装与使用](./markdown/tool-side/001.nginx的安装与使用.md)
 - [002.yeoman脚手架搭建](./markdown/tool-side/002.yeoman脚手架搭建.md)
-
-## Icons
-
-✨🐛🔗📦🔨👉🌈🎨✅📝💄🌱🔰🆙🛡⚙️🌍🖥⌨️🤝❤️💚⚡🔌🧳💪🎯❓👬🎁💿📖🧐🤔👽🎉🔧
