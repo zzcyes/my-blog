@@ -1,0 +1,61 @@
+# 【JavaScript】函数防抖、节流
+
+## 函数防抖(debounce)
+
+> 概念：如果一个事件被频繁触发多次，并且触发的时间间隔过短，则防抖函数可以使得对应的事件处理函数只执行最后触发的一次。 函数防抖可以把多个顺序的调用合并成一次。
+
+eg:王者荣耀的回城
+
+### 代码实现
+
+- 简易版
+
+```javascript
+function debounce(fn, wait) {
+  let timeout;
+  return function () {
+    let context = this; //传给目标函数
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      fn.apply(context, arguments);
+    }, wait);
+  };
+}
+```
+
+- 是否立即执行
+
+```javascript
+function debounce(func, wait, immediate) {
+  // TODO:待补充
+}
+```
+
+## 二、函数节流(throttle)
+
+> 概念：如果一个事件被频繁触发多次，节流函数可以按照固定频率去执行对应的事件处理方法。 函数节流保证一个事件一定时间内只执行一次。
+
+eg:王者荣耀英雄的技能释放
+
+### 代码实现
+
+- 简易版
+
+```javascript
+function throttle(fn, wait) {
+  let timer;
+  return function () {
+    let context = this;
+    if (!timer) {
+      timer = setTimeout(() => {
+        fn.apply(context, arguments);
+        timer = null;
+      }, wait);
+    }
+  };
+}
+```
+
+## links
+
+- [JS 函数节流和函数防抖](https://juejin.im/post/6844903728328212488)
