@@ -1,10 +1,4 @@
-# vue 核心原理
-| Title    | Describe                                     |
-| :------- | :------------------------------------------- |
-| 掌握程度 | ⭐⭐                                         |
-| 目标要求 | vue 核心原理：双向绑定、响应式原理等务必掌握 |
-
-## vue-router
+# vue-router
 
 思维导图（来自[biaochenxuying](https://github.com/biaochenxuying/vue-family-mindmap)）：
 
@@ -53,7 +47,7 @@ export default class VueRouter {
 }
 ```
 
-### 路由模式
+## 路由模式
 
 - hash
 
@@ -77,11 +71,11 @@ window.addEventLinster("hashchange",()=>{
 
 支持所有 JavaScript 运行环境，如 Node.js 服务器端。如果发现没有浏览器的 API，路由会自动强制进入这个模式。
 
-### 模拟实现路由跳转
+## 模拟实现路由跳转
 
 window.history
 
-### links
+## links
 
 - [History 对象](https://javascript.ruanyifeng.com/bom/history.html)
 
