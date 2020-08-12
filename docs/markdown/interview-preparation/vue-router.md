@@ -56,8 +56,8 @@ export default class VueRouter {
 `vue-router` 默认 hash 模式 —— 使用 URL 的 hash 来模拟一个完整的 URL，于是当 URL 改变时，页面不会重新加载。
 
 ```javascript
-window.addEventLinster("hashchange",()=>{
-    console.log("hash already change!");
+window.addEventLinster('hashchange', () => {
+  console.log('hash already change!');
 });
 ```
 
@@ -65,7 +65,7 @@ window.addEventLinster("hashchange",()=>{
 
 依赖 HTML5 History API 和服务器配置。
 
-如果不想要很丑的 hash，我们可以用路由的`history模式 `，这种模式充分利用 history.pushState API 来完成 URL 跳转而无须重新加载页面。
+如果不想要很丑的 hash，我们可以用路由的`history模式`，这种模式充分利用 history.pushState API 来完成 URL 跳转而无须重新加载页面。
 
 - abstract
 
@@ -83,4 +83,4 @@ window.history
 
 - [JavaScript 教程](https://wangdoc.com/javascript/)
 
-- [JS URL()和URLSearchParams() API接口详细介绍](https://www.zhangxinxu.com/wordpress/2019/08/js-url-urlsearchparams/)
+- [JS URL()和 URLSearchParams() API 接口详细介绍](https://www.zhangxinxu.com/wordpress/2019/08/js-url-urlsearchparams/)
