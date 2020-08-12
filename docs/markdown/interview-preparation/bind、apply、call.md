@@ -2,6 +2,85 @@
 
 ## bind
 
+### Polyfill
+
+`bind（）`是在ECMAScript 5中新增的方法，但在ECMAScript 3中可以轻易模拟`bind（）`。
+
+```javascript
+if (!Function.prototype.bind) (function(){
+  var slice = Array.prototype.slice;
+  Function.prototype.bind = function() {
+    var thatFunc = this;
+    var thatArg = arguments[0];
+    var args = slice.call(arguments, 1);
+    if (typeof thatFunc !== 'function') {
+      throw new TypeError('Function.prototype.bind - ' +
+             'what is trying to be bound is not callable');
+    }
+    return function(){
+      var funcArgs = args.concat(slice.call(arguments))
+      return thatFunc.apply(thatArg, funcArgs);
+    };
+  };
+})();
+```
+
 ## apply
 
 ## call
+
+### 应用
+
+1. 安全的类型检测(包括原生对象)
+
+大家知道，在任何值上调用Object原生的toString()方法，都会返回一个`[object NativeConstructorName]`格式的字符串。每个类在内部都有一个`[[Class]]`属性，这个属性中就指定了上述字符串中的构造函数名。
+
+```javascript
+const toRawType = (value) => {
+    return Object.prototype.toString.call(value).slice(8, -1);
+}
+```
+
+示例：
+
+- 检测原生对象
+
+```javascript
+toRawType(window.JSON) // JSON
+toRawType(window.location) // Location
+toRawType(window.localStorage); // Storage
+toRawType(window.history) // History
+toRawType(window) // Window
+```
+
+- 检测内置类型
+
+
+```javascript
+//基本类型
+toRawType(0); // "Number"
+toRawType(''); // "String"
+toRawType(true); // "Boolean"
+toRawType(null); // "Null"
+toRawType(undefined); // "Undefined"
+toRawType(function(){}); // "Function"
+toRawType(Symbol()); // Symbol
+
+// 引用类型
+toRawType([]); // "Array"
+toRawType({}); // "Object"
+toRawType(/a/g); // RegExp
+toRawType(new Date()); // Date
+```
+
+- 检测其他类型
+
+```javascript
+toRawType(new Set()); // Set
+toRawType(new WeakSet()); // WeakSet
+toRawType(new Map()); // Map
+toRawType(new WeakMap()); // WeakMap
+```
+
+tips：请注意，`Object.prototpye.toString()`本身也可能会被修改。这里讨论的技巧假设`Object.prototpye.toString()`是未被修改过的原生版本。
+
