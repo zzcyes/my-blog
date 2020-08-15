@@ -1,4 +1,4 @@
-# vue-router
+# Vue-Router
 
 思维导图（来自[biaochenxuying](https://github.com/biaochenxuying/vue-family-mindmap)）：
 
