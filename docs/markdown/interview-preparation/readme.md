@@ -65,7 +65,7 @@
 
 #### flex
 
-- [meta标签](./meta标签.md)
+- [meta 标签](./meta标签.md)
 
 #### 选择器
 
@@ -120,14 +120,16 @@
 
 ### 3.工具侧
 
-#### vue基本原理
+#### vue 基本原理
 
 | Title    | Describe                                     |
 | :------- | :------------------------------------------- |
 | 掌握程度 | ⭐⭐                                         |
 | 目标要求 | vue 核心原理：双向绑定、响应式原理等务必掌握 |
 
-- [vue-router](./vue-router.md)
+- [Virtual-DOM](./Virtual-DOM.md)
+
+- [Vue-Router](./Vue-Router.md)
 
 #### webpack 核心原理
 
