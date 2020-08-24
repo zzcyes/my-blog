@@ -120,6 +120,8 @@
 
 #### new 操作符
 
+#### window.postMessage
+
 ### 3.工具侧
 
 #### vue 基本原理
