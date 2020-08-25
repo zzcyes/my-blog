@@ -198,7 +198,70 @@ Object.prototype.toString.call(numSeven).slice(8, -1); // Number
 
 ### Reflect.get(target, name, receiver)
 
-### Reflect.set(target, name, value, receiver)
+`Reflect.get` 方法允许你从一个对象中取属性值。就如同`属性访问器`语法，但却是通过函数调用来实现。
+
+#### 参数
+
+`target`需要取值的目标对象
+
+`propertyKey`需要获取的值的键值
+
+`receiver`可选，如果 `target` 对象中指定了 `getter`，`receiver` 则为`getter` 调用时的 this 值。
+
+#### 示例
+
+```javascript
+// Object
+var obj = { x: 1, y: 2 };
+Reflect.get(obj, 'x'); // 1
+
+// Array
+Reflect.get(['zero', 'one'], 1); // "one"
+
+// Proxy with a get handler
+var x = { p: 1 };
+var obj = new Proxy(x, {
+  get(t, k, r) {
+    return k + 'bar';
+  },
+});
+Reflect.get(obj, 'foo'); // "foobar"
+```
+
+`receiver`如果 `target` 对象中指定了 `getter`，`receiver` 则为`getter` 调用时的 this 值。
+
+```javascript
+var myObject = {
+  foo: 1,
+  bar: 2,
+  get baz() {
+    return this.foo + this.bar;
+  },
+};
+
+var myReceiverObject = {
+  foo: 4,
+  bar: 4,
+};
+
+Reflect.get(myObject, 'baz', myReceiverObject); // 8
+```
+
+### Reflect.set(target, propertyKey, value[, receiver])
+
+`Reflect.set` 方法允许你在对象上设置属性。它的作用是给属性赋值并且就像`property accessor` 语法一样，但是它是以函数的方式。
+
+#### 参数
+
+`target`设置属性的目标对象
+
+`propertyKey`设置的属性的名称
+
+`value`设置的值
+
+`receiver`可选，如果遇到`setter`，`receiver` 则为`setter` 调用时的 `this`值。
+
+#### 示例
 
 ### Reflect.defineProperty(target, name, desc)
 

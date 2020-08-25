@@ -187,7 +187,11 @@
 
 #### websocket
 
-[Web Worker 文献综述](http://www.alloyteam.com/2020/07/14680/)
+#### links
+
+- [Web Worker 文献综述](http://www.alloyteam.com/2020/07/14680/)
+
+- [（2.6w 字）网络知识点灵魂拷问——前端面试必问](https://juejin.im/post/6864175613209640973)
 
 ### 6.操作系统
 
