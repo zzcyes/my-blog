@@ -1,0 +1,46 @@
+# void
+
+## 前言
+
+在阅读`Vue-Router`源码时，看到`VueRouter`构造函数里边有如下一段代码实现：
+
+```javascript
+var VueRouter = function VueRouter(options) {
+  if (options === void 0) options = {};
+  ...
+};
+```
+
+其实很容易能看出`options === void 0`的意思是`options`是否为`undefined`，那么为什么不直接用`undefined`，而是使用`void 0`呢？
+
+其实我们经常在 html 中使用到，那么`void 0`的作用到底是什么呢？
+
+```html
+<a href="javascript:void(0)"></a>
+```
+
+## void 0
+
+首先看看 MDN 对于 void 的描述：
+
+- 这个运算符能向期望一个表达式的值是 undefined 的地方插入会产生副作用的表达式。
+
+- void 运算符通常只用于获取 undefined 的原始值，一般使用 void(0)（等同于 void 0）。在上述情况中，也可以使用全局变量 undefined 来代替（假定其仍是默认值）。
+
+从以上两点能得出的结论，void 后面随便写一个表达式，返回的都是 undefined,例如：`void 1`,`void 'zero'`等等，并且`void`不能被重写。
+
+那么为什么我们常用的是 `void 0` 呢，其实很容易推测，既然效果都一样，为什么不选一个表达式中最短的呢，用`void 0`代替 `undefined `能节省字节。不少 js 压缩工具在压缩过程中都是将 `undefined` 用 `void 0 `代替了。
+
+## undefined 重写
+
+undefined 在 ES5 中已经是全局对象的一个只读（read-only）属性了，它不能被重写。但是在局部作用域中，还是可以被重写的。
+
+```javascript
+function redirect() {
+  var route;
+  var undefined = 'route';
+  console.log(route, undefined);
+}
+redirect();
+// undefined,'route'
+```
