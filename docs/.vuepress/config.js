@@ -37,6 +37,34 @@ module.exports = {
                 children: ['markdown/hybrid-app/001.compatibility']
             },
             {
+                title: 'interview-preparation',
+                sidebarDepth: 2,
+                children: [
+                    'markdown/interview-preparation/000.catalogue',
+                    'markdown/interview-preparation/001.Vue-Router',
+                    'markdown/interview-preparation/002.函数防抖、节流',
+                    'markdown/interview-preparation/003.meta标签',
+                    'markdown/interview-preparation/004.垂直居中',
+                    'markdown/interview-preparation/005.闭包',
+                    'markdown/interview-preparation/006.作用域、作用域链',
+                    'markdown/interview-preparation/007.bind、apply、call',
+                    'markdown/interview-preparation/008.函数柯里化',
+                    'markdown/interview-preparation/009.Proxy',
+                    'markdown/interview-preparation/010.Reflect',
+                    'markdown/interview-preparation/011.HTTP、HTTPS',
+                    'markdown/interview-preparation/012.Virtual-DOM',
+                    'markdown/interview-preparation/013.new操作符',
+                    'markdown/interview-preparation/014.CDN',
+                    'markdown/interview-preparation/015.模块化',
+                    'markdown/interview-preparation/016.package.json',
+                    'markdown/interview-preparation/017.void',
+                    'markdown/interview-preparation/018.npm-library',
+                    'markdown/interview-preparation/019.tree-shaking',
+                    'markdown/interview-preparation/020.rollup',
+                    'markdown/interview-preparation/021.abstract-syntax-code',
+                    'markdown/interview-preparation/022.dead-code-elimination']
+            },
+            {
                 title: 'JavaScript',
                 sidebarDepth: 2,
                 children:
@@ -51,11 +79,7 @@ module.exports = {
                         'markdown/JavaScript/009.JavaScript之Symbol',
                         'markdown/JavaScript/010.JavaScript之模块']
             },
-            {
-                title: 'others',
-                sidebarDepth: 2,
-                children: ['markdown/others/001.面试规划']
-            },
+            { title: 'others', sidebarDepth: 2, children: [] },
             {
                 title: 'problem-record',
                 sidebarDepth: 2,
