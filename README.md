@@ -30,11 +30,38 @@
 
 - [001.compatibility](./docs/markdown/hybrid-app/001.compatibility.md)
 
+### interview-preparation
+
+  - [000.catalogue](./docs/markdown/interview-preparation/000.catalogue.md)
+  - [001.Vue-Router](./docs/markdown/interview-preparation/001.Vue-Router.md)
+  - [002.函数防抖、节流](./docs/markdown/interview-preparation/002.函数防抖、节流.md)
+  - [003.meta标签](./docs/markdown/interview-preparation/003.meta标签.md)
+  - [004.垂直居中](./docs/markdown/interview-preparation/004.垂直居中.md)
+  - [005.闭包](./docs/markdown/interview-preparation/005.闭包.md)
+  - [006.作用域、作用域链](./docs/markdown/interview-preparation/006.作用域、作用域链.md)
+  - [007.bind、apply、call](./docs/markdown/interview-preparation/007.bind、apply、call.md)
+  - [008.函数柯里化](./docs/markdown/interview-preparation/008.函数柯里化.md)
+  - [009.Proxy](./docs/markdown/interview-preparation/009.Proxy.md)
+  - [010.Reflect](./docs/markdown/interview-preparation/010.Reflect.md)
+  - [011.HTTP、HTTPS](./docs/markdown/interview-preparation/011.HTTP、HTTPS.md)
+  - [012.Virtual-DOM](./docs/markdown/interview-preparation/012.Virtual-DOM.md)
+  - [013.new操作符](./docs/markdown/interview-preparation/013.new操作符.md)
+  - [014.CDN](./docs/markdown/interview-preparation/014.CDN.md)
+  - [015.模块化](./docs/markdown/interview-preparation/015.模块化.md)
+  - [016.package.json](./docs/markdown/interview-preparation/016.package.json.md)
+  - [017.void](./docs/markdown/interview-preparation/017.void.md)
+  - [018.npm-library](./docs/markdown/interview-preparation/018.npm-library.md)
+  - [019.tree-shaking](./docs/markdown/interview-preparation/019.tree-shaking.md)
+  - [020.rollup](./docs/markdown/interview-preparation/020.rollup.md)
+  - [021.abstract-syntax-code](./docs/markdown/interview-preparation/021.abstract-syntax-code.md)
+  - [022.dead-code-elimination](./docs/markdown/interview-preparation/022.dead-code-elimination.md)
+
+
 ### Vue
 
-- [001.store中“getter”和“mutation”的生成](./markdown/Vue/001.store中“getter”和“mutation”的生成.md)
-- [002.Vue3.0+TypeScript脚手架搭建项目](./markdown/Vue/002.Vue3.0+TypeScript脚手架搭建项目.md)
-- [003.Vue3.0+vue-cli-plugin-vue-next填坑记](./markdown/Vue/003.Vue3.0+vue-cli-plugin-vue-next填坑记.md)
+- [001.store中“getter”和“mutation”的生成](./docs/markdown/Vue/001.store中“getter”和“mutation”的生成.md)
+- [002.Vue3.0+TypeScript脚手架搭建项目](./docs/markdown/Vue/002.Vue3.0+TypeScript脚手架搭建项目.md)
+- [003.Vue3.0+vue-cli-plugin-vue-next填坑记](./docs/markdown/Vue/003.Vue3.0+vue-cli-plugin-vue-next填坑记.md)
 
 ### git
 
