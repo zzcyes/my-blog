@@ -47,7 +47,7 @@ module.exports = {
           'markdown/interview-preparation/001-03.Vuex',
           'markdown/interview-preparation/002.函数防抖、节流',
           'markdown/interview-preparation/003.meta标签',
-          'markdown/interview-preparation/004.垂直居中',
+          'markdown/interview-preparation/004.水平垂直居中',
           'markdown/interview-preparation/005.闭包',
           'markdown/interview-preparation/006.作用域、作用域链',
           'markdown/interview-preparation/007.bind、apply、call',
