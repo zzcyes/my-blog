@@ -30,11 +30,11 @@ module.exports = {
             },
             {
                 "text": "LeetCode",
-                "link": "http: //www.zzcyes.com/leetcode"
+                "link": "http://www.zzcyes.com/leetcode"
             },
             {
                 "text": "Github",
-                "link": "https: //github.com/zzcyes"
+                "link": "https://github.com/zzcyes"
             }
         ],
         "sidebar": [

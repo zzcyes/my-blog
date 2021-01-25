@@ -4,7 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "dev": "node ./index.js&&vuepress dev docs",
+        "update": "node ./index.js",
+        "dev": "vuepress dev docs",
         "build": "node ./index.js&&vuepress build docs"
     },
     "keywords": [],
