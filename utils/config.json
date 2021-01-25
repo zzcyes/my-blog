@@ -1,0 +1,47 @@
+{
+    "title": "zzcyes",
+    "base": "/blog/",
+    "description": "Learning and recording",
+    "head": [
+        [
+            "link",
+            {
+                "rel": "icon",
+                "href": "/img/logo.ico"
+            }
+        ]
+    ],
+    "theme": "antdocs",
+    "themeConfig": {
+        "mode": "dark",
+        "navbar": true,
+        "search": true,
+        "searchMaxSuggestions": 10,
+        "lastUpdated": "Last Updated",
+        "backToTop": true,
+        "nav": [
+            {
+                "text": "Home",
+                "link": "/"
+            },
+            {
+                "text": "Catalogue",
+                "link": "/catalogue"
+            },
+            {
+                "text": "LeetCode",
+                "link": "http: //www.zzcyes.com/leetcode"
+            },
+            {
+                "text": "Github",
+                "link": "https: //github.com/zzcyes"
+            }
+        ],
+        "sidebar": [
+            [
+                "/catalogue",
+                "Catalogue"
+            ]
+        ]
+    }
+}
