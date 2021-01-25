@@ -1,17 +1,21 @@
 {
-  "name": "vue-press-blog",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "markdown-it-disable-url-encode": "^1.0.1",
-    "vuepress": "^1.5.2"
-  }
+    "name": "vue-press-blog",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "node ./index.js&&vuepress dev docs",
+        "build": "node ./index.js&&vuepress build docs"
+    },
+    "keywords": [],
+    "author": "zzcyes",
+    "license": "ISC",
+    "dependencies": {
+        "markdown-it-disable-url-encode": "^1.0.1",
+        "vuepress": "^1.5.2"
+    },
+    "devDependencies": {
+        "vuepress-theme-antdocs": "^1.2.2",
+        "vuepress-theme-reco": "^1.6.1"
+    }
 }
